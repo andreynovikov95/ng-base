@@ -38,6 +38,10 @@ export class CardComponent implements OnInit {
       this.title = value
   }
 
+  changeHandler() {
+    console.log(this.title)
+  }
+
   getInfo(): string {
     return 'This is my info'
   }

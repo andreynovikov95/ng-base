@@ -20,12 +20,19 @@
       Change title inline
     </button>
   </div>
-  <div>
+  <!-- <div>
     <input
       type="text"
       #myInput
       (input)="inputHunler(myInput.value)"
       [value]="title"
+    >
+  </div> -->
+  <div>
+    <input
+      type="text"
+      [(ngModel)]="title"
+      (ngModelChange)="changeHandler()"
     >
   </div>
 </div>
