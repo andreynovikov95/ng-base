@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Card } from '../app.component';
 
 @Component({
   selector: 'app-card',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   interpolation: ['[[', ']]']
 })
 export class CardComponent implements OnInit {
+  @Input() card: Card
+  @Input() index: number
+
   number: number = 42
   title: string = 'Card component'
+  textColor: string
   text: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, eum?'
   imgUrl: string = 'https://images.unsplash.com/photo-1585159904350-24ea5cf707c0?&auto=format&fit=crop&w=1950&q=80'
   array: number[] = [1, 1, 2, 3, 5, 8, 13]
@@ -31,15 +36,15 @@ export class CardComponent implements OnInit {
   }
 
   changeTitle() {
-    this.title = 'Title has been changed'
+    this.card.title = 'Title has been changed'
   }
 
   inputHunler(value: string) {
-      this.title = value
+      this.card.title = value
   }
 
   changeHandler() {
-    console.log(this.title)
+    console.log(this.card.title)
   }
 
   getInfo(): string {
