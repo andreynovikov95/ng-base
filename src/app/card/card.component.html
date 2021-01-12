@@ -6,6 +6,25 @@
   <pre>Use pipe [[ obj | json ]]</pre>
   <p>[[ getInfo() ]]</p>
   <div class="card__img">
-    <img width="700" src="[[ imgUrl ]]">
+    <img width="700" [src]="imgUrl">
+    <br>
+    <button [disabled]="disabled">
+      Enable
+    </button>
+  </div>
+  <div class="buttons">
+    <button (click)="changeTitle()">
+      Change title
+    </button>
+    <button (click)="title = 'Inline title'">
+      Change title inline
+    </button>
+  </div>
+  <div>
+    <input
+      type="text"
+      (input)="inputHunler($event)"
+      [value]="title"
+    >
   </div>
 </div>

@@ -19,13 +19,27 @@ export class CardComponent implements OnInit {
       job: 'Frontend'
     }
   }
+  disabled: boolean = false
 
   constructor() { }
 
   ngOnInit(): void {
     setTimeout(() => {
       this.imgUrl = 'https://images.unsplash.com/photo-1518409274682-1cb2fe2955a8?&auto=format&fit=crop&w=1568&q=80'
+      this.disabled = true
     }, 3000)
+  }
+
+  changeTitle() {
+    this.title = 'Title has been changed'
+  }
+
+  inputHunler({ 
+    target: {
+      value
+    }
+   }) {
+      this.title = value
   }
 
   getInfo(): string {
