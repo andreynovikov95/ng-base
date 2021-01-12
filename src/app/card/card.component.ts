@@ -25,6 +25,7 @@ export class CardComponent implements OnInit {
     }
   }
   disabled: boolean = false
+  cardDate: Date = new Date()
 
   constructor() { }
 
