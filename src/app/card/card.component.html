@@ -23,7 +23,8 @@
   <div>
     <input
       type="text"
-      (input)="inputHunler($event)"
+      #myInput
+      (input)="inputHunler(myInput.value)"
       [value]="title"
     >
   </div>

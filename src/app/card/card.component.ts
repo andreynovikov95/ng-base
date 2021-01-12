@@ -34,11 +34,7 @@ export class CardComponent implements OnInit {
     this.title = 'Title has been changed'
   }
 
-  inputHunler({ 
-    target: {
-      value
-    }
-   }) {
+  inputHunler(value: string) {
       this.title = value
   }
 
